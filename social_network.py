@@ -83,4 +83,19 @@ network.print_network()
 
 '''
 DESIGN MEMO
+Why is a graph the right structure to represent a social network?
+A graph allows us to more easily create connections between nodes compared to other structures.
+Each node can store its own connections and printing them allows the graph to be visualized.
+In general, a graph is very close to the structure of an actual social network, made up of individuals and the connections between them.
+
+Why wouldn’t a list or tree work as well for this?
+A list cannot be as specific as a graph. For example, a list of ["Jacob", "Tyler", "Eric"] couldn't represent if Jacob was friends with Eric but not with Tyler.
+Similarly, a tree can't represent the intricacies of a social network. A tree inherently represents a hierarchy.
+People are connected to up to one person above them and up to two people below them. 
+These networks do not necessarily have a root person who everyone connects to, but rather a web of connections between different people.
+There might be some with more connections than others, but they are never so central that everything branches off of them.
+
+What performance or structural trade-offs did you notice when adding friends or printing the network?
+One trade-off I noticed is with the print network function. The function creates a separate list and string for each person in the network.
+This is a trade-off to make the process easier by using more space.
 '''
